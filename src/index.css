@@ -1,8 +1,21 @@
+@font-face {
+  font-family: "dFont";
+  src: url("/assets/fonts/D-DIN.woff2") format("woff2"),
+    url("/assets/fonts/D-DIN.woff") format("woff");
+}
+
+@font-face {
+  font-family: "dFontBold";
+  src: url("/assets/fonts/D-DIN-Bold.woff2") format("woff2"),
+    url("/assets/fonts/D-DIN-Bold.woff") format("woff");
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+  font-family: dFont, Arial, Helvetica, sans-serif;
 }
 
 /* Remove built-in form typography styles */

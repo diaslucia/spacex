@@ -1,0 +1,20 @@
+// Global colors
+$blue: #005189;
+$lightBlue: #64ccc5;
+$darkBlue: #001c30;
+$darkBlueHover: #00111d;
+$white: rgb(247, 249, 255);
+$grey: #a8abae;
+
+//Mixins
+@mixin flex($direction, $justify, $align, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+@mixin width-height($width, $height) {
+  width: $width;
+  height: $height;
+}

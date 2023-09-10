@@ -1,0 +1,21 @@
+@import "@/utils/theme.scss";
+
+.container {
+  @include flex(row, center, center);
+  @include width-height(100vw, 100vh);
+  background-image: url("/assets/images/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $darkBlue;
+  .box {
+    @include flex(column, space-evenly, center);
+    @include width-height(500px, 200px);
+    background-color: $white;
+    border-radius: 8px;
+    .logo {
+      @include width-height(300px, auto);
+      object-fit: contain;
+    }
+  }
+}

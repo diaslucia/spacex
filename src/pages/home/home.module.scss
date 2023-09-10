@@ -1,0 +1,26 @@
+@import "@/utils/theme.scss";
+
+.container {
+  @include flex(column, center, flex-start, 10px);
+  @include width-height(100vw, 100vh);
+  background-image: url("assets/images/wallpaper.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $darkBlue;
+  padding: 50px;
+  .title {
+    text-align: left;
+    color: $white;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .link {
+    color: $white;
+    font-size: 18px;
+    text-align: left;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}
