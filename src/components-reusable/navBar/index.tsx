@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 /* GraphQL */
 import { useQuery } from "@apollo/client";
 import { GET_ROCKETS } from "@/hooks/apollo";
-import { RocketsType } from "@/hooks/typescript/types";
+import { RocketsType } from "@/utils/typescript/types";
 import Menu from "./menu";
 import LoaderPage from "../loaderPage";
 
@@ -29,7 +29,11 @@ const NavBar = () => {
       <ul className={styles.list}>
         {data?.rockets.map((rocket) => {
           return (
-            <li key={rocket.id} className={styles.item}>
+            <li
+              key={rocket.id}
+              className={styles.item}
+              onClick={() => navigate(`/rocket/${rocket.id}`)}
+            >
               {rocket.name}
             </li>
           );

@@ -1,7 +1,7 @@
 @import "@/utils/theme.scss";
 
 .container {
-  @include flex(column, center, flex-start, 10px);
+  @include flex(column, center, center, 20px);
   @include width-height(100vw, 100vh);
   background-image: url("assets/images/wallpaper.jpg");
   background-position: center;
@@ -9,4 +9,18 @@
   background-size: cover;
   background-color: $darkBlue;
   padding: 50px;
+  .title {
+    color: $white;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+  }
+  .subtitle {
+    color: $white;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 800px;
+  }
 }

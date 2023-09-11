@@ -9,6 +9,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "./pages/login";
 import Home from "./pages/home";
 import Profile from "./pages/profile/index.tsx";
+import Rocket from "./pages/rocket/index.tsx";
 
 const client = new ApolloClient({
   uri: "https://spacex-production.up.railway.app/",
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/rocket/:id",
+        element: <Rocket />,
       },
       {
         path: "/profile",
