@@ -8,10 +8,8 @@ interface RocketData {
 }
 
 export interface RocketType {
-  rocket: RocketSingleData[];
-}
-
-interface RocketSingleData {
-  name: string;
-  description: string;
+  rocket: {
+    name: string;
+    description: string;
+  };
 }
