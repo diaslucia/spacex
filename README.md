@@ -3,6 +3,7 @@
 
 <div align="center">
   <img src="public/assets/images/logo.png" alt="Logo" width="auto" height="30">
+  <br/>
   <div>
     <img height="30px" alt="React JS" src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" />
     <img height="30px" alt="Typescript" src="https://img.shields.io/badge/Typescript-1572B6?style=for-the-badge&logo=typescript&logoColor=white" />
