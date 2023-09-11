@@ -8,6 +8,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 /* Components */
 import Login from "./pages/login";
 import Home from "./pages/home";
+import Profile from "./pages/profile/index.tsx";
 
 const client = new ApolloClient({
   uri: "https://spacex-production.up.railway.app/",
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/profile",
+        element: <Profile />,
       },
     ],
   },
@@ -38,6 +43,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     authorizationParams={{
       redirect_uri: window.location.origin,
     }}
+    useRefreshTokens={true}
+    cacheLocation="localstorage"
   >
     <ApolloProvider client={client}>
       <RouterProvider router={router} />

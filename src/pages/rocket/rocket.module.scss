@@ -9,14 +9,4 @@
   background-size: cover;
   background-color: $darkBlue;
   padding: 50px;
-  .title {
-    text-align: left;
-    color: $white;
-    font-size: 36px;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  .link {
-    @include button(18px, $darkBlue);
-  }
 }

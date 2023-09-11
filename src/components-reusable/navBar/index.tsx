@@ -8,16 +8,24 @@ import { useNavigate } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { GET_ROCKETS } from "@/hooks/apollo";
 import { RocketsType } from "@/hooks/typescript/types";
+import Menu from "./menu";
+import LoaderPage from "../loaderPage";
 
 const NavBar = () => {
-  const { data } = useQuery<RocketsType>(GET_ROCKETS);
-  const { isAuthenticated } = useAuth0();
-  const { logout } = useAuth0();
+  const { data, loading } = useQuery<RocketsType>(GET_ROCKETS);
+  const { isAuthenticated, user } = useAuth0();
   const navigate = useNavigate();
+
+  if (loading) return <LoaderPage />;
 
   return (
     <nav className={styles.container}>
-      <img src={logo} alt="Logo SpaceX" className={styles.logo} />
+      <img
+        src={logo}
+        alt="Logo SpaceX"
+        className={styles.logo}
+        onClick={() => navigate("/")}
+      />
       <ul className={styles.list}>
         {data?.rockets.map((rocket) => {
           return (
@@ -28,12 +36,7 @@ const NavBar = () => {
         })}
         <li>
           {isAuthenticated ? (
-            <Button
-              text="Log out"
-              onClick={() =>
-                logout({ logoutParams: { returnTo: window.location.origin } })
-              }
-            />
+            <Menu name={user?.name} picture={user?.picture} />
           ) : (
             <Button text="Log in" onClick={() => navigate("/login")} />
           )}

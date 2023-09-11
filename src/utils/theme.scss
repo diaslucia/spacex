@@ -18,3 +18,36 @@ $grey: #a8abae;
   width: $width;
   height: $height;
 }
+@mixin button($size, $color) {
+  font-size: $size;
+  text-align: left;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-image: linear-gradient(to right, $color, $color 50%, $white 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  background-clip: inherit;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+  &:before {
+    content: "";
+    background: $color;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover {
+    background-position: 0;
+  }
+  &:hover::before {
+    width: 100%;
+  }
+}

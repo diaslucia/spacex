@@ -6,7 +6,7 @@ const Home = () => {
       <h1 className={styles.title}>
         ADVANCED ROCKETS <br /> AND SPACECRAFTS
       </h1>
-      <p className={styles.link}>Learn more _</p>
+      <a className={styles.link}>Learn more _</a>
     </div>
   );
 };

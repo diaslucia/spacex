@@ -1,0 +1,43 @@
+@import "@/utils/theme.scss";
+
+.wrapper {
+  position: relative;
+  .container {
+    @include flex(row, center, center, 20px);
+    @include width-height(200px, auto);
+    cursor: pointer;
+    .img {
+      @include width-height(30px, 30px);
+      object-fit: contain;
+      border-radius: 100%;
+    }
+    .name {
+      color: $white;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    .arrow {
+      @include width-height(10px, 10px);
+      object-fit: contain;
+      transform: rotate(180deg);
+      transition: transform 0.7s;
+    }
+    .arrowDown {
+      transform: rotate(0deg);
+    }
+  }
+  .dropdown {
+    @include flex(column, center, center, 10px);
+    position: absolute;
+    top: 45px;
+    @include width-height(200px, auto);
+    opacity: 1;
+    transition: all 0.7s;
+    .dropdownItem {
+      @include button(16px, $grey);
+    }
+  }
+  .dropdownClosed {
+    opacity: 0;
+  }
+}
