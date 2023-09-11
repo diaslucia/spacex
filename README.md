@@ -2,8 +2,7 @@
 <br />
 
 <div align="center">
-  <img src="/assets/images/logo.png" alt="Logo" width="80" height="80">
-  <h3 align="center">SpaceX</h3>
+  <img src="public/assets/images/logo.png" alt="Logo" width="auto" height="30">
   <div>
     <img height="30px" alt="React JS" src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" />
     <img height="30px" alt="Typescript" src="https://img.shields.io/badge/Typescript-1572B6?style=for-the-badge&logo=typescript&logoColor=white" />
@@ -15,7 +14,7 @@
 </div>
 
 <p align="center">
-  <img src="/assets/images/gif.gif" width="400" align=center />
+  <img src="public/assets/images/gif.gif" width="400" align=center />
 </p>
 
 ## 🔎 About
