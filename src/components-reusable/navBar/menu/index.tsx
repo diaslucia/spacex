@@ -36,7 +36,12 @@ const Menu = ({
             : `${styles.dropdown} ${styles.dropdownClosed}`
         }
       >
-        <p className={styles.dropdownItem} onClick={() => navigate("/profile")}>
+        <p
+          className={styles.dropdownItem}
+          onClick={() => {
+            navigate("/profile"), setIsOpen(!isOpen);
+          }}
+        >
           Profile
         </p>
         <p

@@ -1,12 +1,33 @@
 @import "@/utils/theme.scss";
 
 .container {
-  @include flex(column, center, flex-start, 10px);
+  @include flex(column, center, center, 10px);
   @include width-height(100vw, 100vh);
   background-image: url("assets/images/wallpaper2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $darkBlue;
-  padding: 50px;
+  .box {
+    @include flex(row, space-evenly, center);
+    @include width-height(500px, 200px);
+    background-color: $white;
+    border-radius: 8px;
+    .img {
+      @include width-height(110px, 110px);
+      object-fit: contain;
+      border-radius: 100%;
+    }
+    .text {
+      font-size: 22px;
+      color: $darkBlue;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    .subtext {
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
 }
